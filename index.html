@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <title>Encr1pt@d0r de T3xT0</title>
+   
+</head>
+<body>
+    <header>  
+        <img src="./imagenes/Logo.png" alt="Logo de Alura" class="Logo">
+        
+        <h1 class="Titulo"> Desencriptador de Texto </h1>
+
+    </header>
+
+    <main>
+        <section>
+            <textarea  class="text-area" cols="30" rows="10" placeholder=" Escribe el texto aca" oninput="validarMayuscula()" ></textarea>
+            <div>
+                <h6 class="informacion" > "Recuerde : Usar solo minúsculas , No deben ser utilizados letras con acentos ni caracteres especiales y sin números" </h6>
+            </div>
+        
+            <div class="container_botones" >
+                <button onclick="cifrarTexto()" class="container_botonCifrar" disabled>Cifrar</button>
+                <button onclick="decifrarTexto()" class="container_botonDecifrar" disabled>Decifrar</button>
+            </div>
+
+        </section>
+        
+        
+        <section>
+            <textarea id="mi-texto" class="text-mensaje"  cols="20" rows="10" ></textarea>
+            <div>
+                <button class="btn-copiar" onclick = "copiar('mi-texto')" disabled  >Copiar</button>
+            </div>
+        </section>
+
+    </main>
+
+     <script src="app.js"></script>
+
+ 
+
+</body>
+</html>
