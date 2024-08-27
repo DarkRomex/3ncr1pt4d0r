@@ -1,1 +1,0 @@
-# Encr1pt4d0r
