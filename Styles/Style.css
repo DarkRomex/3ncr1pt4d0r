@@ -1,112 +1,346 @@
 *{
-    background-color: rgba(219, 218, 218, 0.915);
+    
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 300;
-    font-size: 30px;
-
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
 }
-.Titulo{
-     font-style: normal;
+
+
+::selection{
+    background:#0a3871;
+    color: beige;
+}
+
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
     
-      
+ 
 }
 
+header{
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
 
-.Logo{
-    padding: 20px;
-    margin-left: 15;
-    width: 15%;
+header .Logo{
+    display: flex;
+    align-items: flex-start;
+    height: 48px;
+    width: 120px;
     
 }
 
 main{
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 95px;
+    flex-direction: row;
+    background: url(../imagenes/back.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
 }
+
+
+.porEncriptar{
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+}
+
+
 
 
 .text-area{
-    border:none;
-    color: rgb(184, 224, 22);
-    margin-top: 90px;
-    text-transform: lowercase; /* convierte a minuscula*/
+    width: 660px;
+    height: 288px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: navy;
+    border:8px outset rgba(155, 155, 155, 0.584);
+    border-radius: 25px;
+    resize: none;
+    
 }
 
-.text-area:focus{ 
-    outline:none;
-}
-
-::placeholder{
+.porEncriptar::placeholder,:focus{
     color: rgba(103, 112, 238, 0.892);
 }
 
-
-.text-mensaje{
-    border: outset;
-    border-radius: 15px;
+.container_aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: absolute;
+    top: 500px;
 }
-.text-mensaje:focus{ 
-    outline:none;
+
+.informacion{
+    width: 100%;
+    font-style: oblique;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    opacity: 1;
+    color: navy;
+    font-family: 'ROBOTO';
+    
+}
+
+
+.container_botones{
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 560px;
 }
 
 
 
 
+.container_botonCifrar{
+ 
+    width: 150px;
+    height: 59px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 10px;
+    text-align: center;
+    color: honeydew;
+    border-radius: 20px;
+    background: navy;
+    border:3px outset navy;
+    font-family: 'Roboto';
+    cursor:pointer;
+    box-shadow: 0px 20px 29px -5px rgba(0,0 0, 0.08);
 
-/*
-.container_botones {
-    display:flex;
-    margin-top: 18px;
-    gap: 25px;
 }
-*/
+
+.container_botonCifrar:active{
+    box-shadow: inset 2px 2px 4px rgb(4, 235, 192);
+    inset: -3px -4px 8px rgba(0,5 0, 0.08);
+    color: rgb(64, 128, 0);
+}
+
+
+
 
 
 .container_botonDecifrar{
-    border-radius: 15px;
-    background: fixed;
-    border:outset;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-size: x-large;
-    cursor:pointer;
+   color: rgb(0, 106, 255);
     width: 150px;
-    height: 65px;
-    
+    height: 59px;
+    padding: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Roboto';
+    cursor:pointer;
+    box-shadow: 0px 20px 29px -5px rgba(0,0 0, 0.08);
       
 }
 
-.container_botonCifrar{
-    border-radius: 15px;
-    background: fixed;
-    border:outset;
+
+.container_botonDecifrar:active{
+    box-shadow: inset 2px 2px 4px rgb(25, 0, 151);
+    inset: -3px -4px 8px rgba(0,5 0, 0.08);
+    color: rgb(73, 128, 0);
+}
+
+
+
+
+.resultadoEncriptar{
+    width: 270px;
+    height: 580px;
+    background: rgb(241, 237, 237);
+    box-shadow: 10px 24px 32px -8px rgb(33, 40, 10);
+    position: relative;
+    margin-top: 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+
+
+.text-mensaje{
+    width: 100%;
+    height: 485px;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 500;
     font-family: 'Roboto';
-    font-style: normal;
-    font-size: x-large;
-    cursor:pointer;
-    width: 150px;
-    height: 65px;
-    
-      
+    font-size: 24px;
+    line-height: 36px;
+    color: darkgray;
+    background: transparent;
+    border-top-left-radius:32px;
+    border-top-right-radius: 32px;
+    border: none;
+    resize: none;
 }
 
 
 .btn-copiar{
-    border: inset 2px;
-    border-radius: 20px;
-    position: absolute;
+    width: 100%;
     height: 30px;
-    font-size: 15px;
+    position: absolute;
+    font-size: 36px;
+    font-style:normal;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    line-height: 5px;
+    text-align: center;
+    background: rgb(4, 127, 236);
+    border: inset 2px navy;
+    border-radius: 20px;
+    color: aqua;
     cursor: copy;
-
+    top: 526px;
+    box-shadow: 0px 20px 29px -5px rgba(0,0 0, 0.08);
 }
-.informacion {
-    font-size: 15px;
-    font-weight: 650;
-    background-color: fixed;
-    font-family: 'ROBOTO';
+
+.btn-copiar:active{
+    box-shadow: inset 2px 2px 4px rgb(4, 235, 192);
+    inset: -3px -4px 8px rgba(0,5 0, 0.08);
+    color: rgb(235, 46, 28);
+}
+
+.btn-copiar:hover,.container_botonCifrar:hover,.container_botonDecifrar:hover{
+    transform: scale(0.77);
+}
+
+
+footer{
+
+    margin-top: 0;
+    padding: 15px;
+    border-top: 8px inset rgb(66, 105, 230);
+    color:darkgray;
+    text-align: center;
     font-style: normal;
+    font-size: 25px;
+    font-weight: 700px;
+    height: 5px;
+       
 
+
+     
+ }
+
+
+ .logo-linkedin:hover{
+    color: honeydew;
+    opacity: 0.2;
+    
+ }
+
+
+ .logo-github:hover{
+    color: honeydew;
+    opacity: 0.5;
+ }
+ 
+
+ @media (max-width: 1250px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .porEncriptar {
+        margin: 168px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .container_botones {
+        display: flex;
+        align-items: center;
+        position: inherit;
+    }
+
+    .container_aviso {
+        position: inherit;
+        margin: 15px;
+    }
+
+    .resultadoEncriptar {
+        width: 660px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .text-mensaje {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .btn-copiar {
+        position: inherit;
+        width: 100%;
+    }
+
+    .text-mensaje {
+        width: 100%;
+        height: 210px;
+        padding: 10px;
+    }
 }
+
+@media (max-width: 720px) {
+    header .Logo {
+        width: 100%;
+        background: honeydew;
+        padding: 2px;
+    }
+
+    .porEncriptar {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    .container_botones {
+        display: grid;
+        gap: 21px;
+    }
+
+    .resultadoEncriptar {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
+
+ 
