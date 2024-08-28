@@ -324,7 +324,21 @@ footer{
         padding: 2px;
         
     }
+
+    .informacion{
+        color: rgb(0, 255, 166);
+    }
     
+    .Titulo{
+        color: rgb(0, 255, 166);
+        font-weight: 600;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 35px;
+        
+    }
+
+
     .text-area{
         width: 90%;
         font-size: 24px;
