@@ -318,10 +318,16 @@ footer{
 }
 
 @media (max-width: 720px) {
+
     header .Logo {
-        width: 100%;
-        background: honeydew;
+        width: 30%;
         padding: 2px;
+        
+    }
+    
+    .text-area{
+        width: 90%;
+        font-size: 24px;
     }
 
     .porEncriptar {
