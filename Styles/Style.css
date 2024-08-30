@@ -15,6 +15,13 @@
     color: beige;
 }
 
+.Titulo{
+        font-weight: 500;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 35px;
+        padding: 12px;
+}
 
 body{
     height: 100%;
@@ -214,6 +221,7 @@ main{
     color: aqua;
     cursor: copy;
     top: 526px;
+    font-weight: 600;
     box-shadow: 0px 20px 29px -5px rgba(0,0 0, 0.08);
 }
 
@@ -322,6 +330,8 @@ footer{
     header .Logo {
         width: 30%;
         padding: 2px;
+        filter: invert(100%) brightness(200%);
+        
         
     }
 
